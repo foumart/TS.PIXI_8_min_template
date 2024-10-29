@@ -22,8 +22,6 @@ initDevtools({ app });
         .rect(100, 0, 100, 100)
         .fill({color:0xFFFF00, alpha:0.5});
 
-    console.log(rect);
-
     // Add the graphics object to the PIXI application
     app.stage.addChild(rect);
 })();

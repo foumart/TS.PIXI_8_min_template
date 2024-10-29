@@ -30,4 +30,18 @@ module.exports = {
         },
     },
     devtool: 'source-map',
+    watchOptions: {
+        aggregateTimeout: 300, // Delay the rebuild after the first change (in ms)
+        poll: 1000, // Check for changes every second
+        ignored: /node_modules/, // Ignore changes in node_modules
+    },
+    devServer: {
+        static: {
+            directory: path.join(__dirname, 'public'),
+        },
+        compress: true,
+        port: 9000,
+        open: true,
+        watchFiles: ['src/**/*']
+    },
 };
